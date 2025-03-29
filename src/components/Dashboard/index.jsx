@@ -415,9 +415,10 @@ const Dashboard = ({ background = "white", textColor = "black" }) => {
                     <div>
                       {filteredData.length !== 0 && (
                         <div className="dataOutput">
-                          {filteredData.map(item => {
+                          {filteredData.map((item, index) => {
                             return (
                               <div
+                                key={index}
                                 onClick={e => {
                                   setCountry(item.name);
                                   setCountrySearch("");
